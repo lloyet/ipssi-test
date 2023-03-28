@@ -6,7 +6,8 @@
 	"scripts": {
 		"start": "node ./index.js",
 		"test": "node ./test/version.test.js",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"check:format": "prettier --check ."
 	},
 	"author": "",
 	"license": "ISC",
