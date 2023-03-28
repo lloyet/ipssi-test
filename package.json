@@ -5,12 +5,14 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "node ./index.js",
-		"test": "node ./test/version.test.js"
+		"test": "node ./test/version.test.js",
+		"format": "prettier --write ."
 	},
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
 		"express": "^4.18.2",
+		"prettier": "^2.8.7",
 		"supertest": "^6.3.3"
 	}
 }
