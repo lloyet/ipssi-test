@@ -1,0 +1,16 @@
+{
+	"name": "ipssi",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node ./index.js",
+		"test": "node ./test/version.test.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"express": "^4.18.2",
+		"supertest": "^6.3.3"
+	}
+}
