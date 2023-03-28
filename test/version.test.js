@@ -1,4 +1,5 @@
 const request = require("supertest");
+const assert = require("assert");
 const { app } = require("../index");
 
 request(app)
@@ -7,4 +8,6 @@ request(app)
 	.expect(200)
 	.end((err, res) => {
 		if (err) throw err;
+
+		assert.strictEqual(res.body.version, "1.0.0");
 	});
