@@ -4,7 +4,7 @@ const app = express();
 
 app.get("/version", (req, res, next) => {
 	res.json({
-		version: "1.0.0",
+		version: "1.0.0"
 	});
 });
 
@@ -13,5 +13,5 @@ app.get("/version", (req, res, next) => {
 });*/
 
 module.exports = {
-	app,
+	app
 };
