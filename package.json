@@ -5,15 +5,20 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "node ./index.js",
-		"test": "node ./test/version.test.js",
+		"test": "mocha ./test/*.test.js",
 		"format": "prettier --write .",
 		"check:format": "prettier --check ."
 	},
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-		"express": "^4.18.2",
+		"dotenv": "^16.0.3",
+		"mocha": "^10.2.0",
 		"prettier": "^2.8.7",
 		"supertest": "^6.3.3"
+	},
+	"dependencies": {
+		"express": "^4.18.2",
+		"redis": "^4.6.5"
 	}
 }
