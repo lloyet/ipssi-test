@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  db:
+    container_name: ipssi-test-redis
+    image: redis:7.0.10-alpine3.17
+    ports:
+      - 6379:6379
