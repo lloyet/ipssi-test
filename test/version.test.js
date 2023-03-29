@@ -1,9 +1,10 @@
 const request = require("supertest");
 const assert = require("assert");
-const { describe, it } = require("mocha");
+const { describe, it, beforeEach, afterEach } = require("mocha");
 const { server } = require("../src/app");
+const db = require("../src/db");
 
-describe("Test version", () => {
+describe("Testing version", () => {
 	it("Is version available", (done) => {
 		request(server)
 			.get("/version")
@@ -16,5 +17,21 @@ describe("Test version", () => {
 
 				return done();
 			});
+	});
+});
+
+describe("Testing DB", () => {
+	beforeEach(async () => {
+		await db.connect();
+	});
+
+	afterEach(async () => {
+		if (db.isOpen) await db.quit();
+	});
+
+	it("Is REDIS db connection is open", (done) => {
+		assert.strictEqual(db.isOpen, true);
+
+		done();
 	});
 });
