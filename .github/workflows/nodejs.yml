@@ -27,6 +27,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Starting Redis DB with compose
+        run: docker compose up -d
       - name: Install Dependencies
         run: npm ci
       - name: Format code
